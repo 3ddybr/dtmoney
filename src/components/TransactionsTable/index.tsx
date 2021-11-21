@@ -6,8 +6,7 @@ import { Container } from "./styles";
 
 export function TransactionsTable (){
     const {transactions} = useTransactions();
-    
-    
+
     return(
         <Container>
             <table>
@@ -21,13 +20,12 @@ export function TransactionsTable (){
                 </thead>
 
                 <tbody>
-                    {transactions.map(transaction=> (
-                        
+                    {transactions.map(transaction=> (                        
                             <tr key={transaction.id}>
                                 <td>{transaction.title}</td>
 
                                 <td className={transaction.type}>
-                                    {new Intl.NumberFormat('pt-BR',{
+                                    {new Intl.NumberFormat('pt-BR',{//formata para moeda BR
                                         style:'currency',
                                         currency:'BRL'
                                     }).format(transaction.amount)}
@@ -36,7 +34,7 @@ export function TransactionsTable (){
                                 <td>{transaction.category}</td>
 
                                 <td>
-                                    {new Intl.DateTimeFormat('pt-BR').format(
+                                    {new Intl.DateTimeFormat('pt-BR').format( //formata para data BR
                                         new Date(transaction.createdAt)
                                     )}
                                 </td>                                

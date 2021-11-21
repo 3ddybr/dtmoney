@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle `
 
     }
 
-    *{
+    *{ //styles globais para toda a aplicação
         margin:0;
         padding:0;
         box-sizing:border-box;
@@ -24,18 +24,18 @@ export const GlobalStyle = createGlobalStyle `
 
     html {
         @media (max-width :1080px) {
-            font-size:93.75%;
+            font-size:93.75%; //resultado que de 16px vem pra 15px
         }
 
         @media(max-width: 720px){
-            font-size:87.5%;
+            font-size:87.5%; //resultado que de 16px vem pra 14px
         }
 
     }
 
     body {
-        background: var(---background);
-        -webkit-font-smoothing: antialiased;
+        background: var(--background);
+        -webkit-font-smoothing: antialiased; //para melhorar a visualização do texto as fonts ficarem mais nitidas
     }
 
     body, input, textarea, button{ //por padrão nao importam a fonte do body do html eles tem sua própria font
@@ -52,7 +52,7 @@ export const GlobalStyle = createGlobalStyle `
         cursor: pointer;
     }
 
-    [disabled] {
+    [disabled] {//tudo que esta desabilitado
         opacity: 0.6;
         cursor: not-allowed; //plaquinha de nao permitido
     }

@@ -10,7 +10,8 @@ import { GlobalStyle } from "./styles/global";
 
 
 Modal.setAppElement('#root');
-
+//Movel-se o estado do componente para dentro do componente Pai (superior) para compartilhar ele com os filhos (abaixo)
+//trouxe pro App pra compartilhar com o Header e o NewTransactionModal
 export function App() {
   const [isNewTransactionModalOpen, setIsNewTransactionModalOpen] = useState(false);
 
@@ -38,4 +39,3 @@ export function App() {
     </TransactionsProvider>
   );
 }
-

@@ -17,7 +17,7 @@ export const Container = styled.div `
             align-items:center;
             justify-content:space-between;
         }
-        strong { //por padrão vem com display in-line
+        strong { //por padrão vem com display in-line, ai o margin top nao funciona
             display:block;
             margin-top:1rem;
             font-size:2rem;

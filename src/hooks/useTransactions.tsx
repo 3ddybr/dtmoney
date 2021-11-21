@@ -9,7 +9,8 @@ interface Transaction {
     category: string;
     createdAt:string;
 }
-type TransactionInput = Omit<Transaction, 'id' | 'createdAt'>
+type TransactionInput = Omit<Transaction, 'id' | 'createdAt'>//omiti apenas esses dois campos 
+
 interface TransactionProviderProps{ //quando as props vao receber qualquer conteúdo do tipo react usa-se ReactNode
     children:ReactNode;
 }

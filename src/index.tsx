@@ -26,13 +26,21 @@ createServer ({
           category:'Casa',
           amount:1100,
           createdAt: new Date('2021-02-14 11:00:00'),
+        },
+        {
+          id:3,
+          title: 'Lanche',
+          type: 'withdraw',
+          category:'Casa',
+          amount:110,
+          createdAt: new Date('2021-11-17 22:00:00'),
         }
       ],
     })
   },
 
   routes(){
-    this.namespace ='api';
+    this.namespace ='api'; //todas as chamadas vem a partir desse endereco  
 
     this.get('/transactions', () => {
       return this.schema.all('transaction');

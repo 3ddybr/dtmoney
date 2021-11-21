@@ -41,8 +41,8 @@ export function NewTransactionModal({isOpen, onRequestClose}: NewTransactionModa
         
     return(
         <Modal 
-        isOpen={isOpen} 
-        onRequestClose={onRequestClose}
+        isOpen={isOpen} //funcao para abrir o modal 
+        onRequestClose={onRequestClose} //funcao para fechar o modal
         overlayClassName="react-modal-overlay"
         className="react-modal-content"
       >
@@ -81,10 +81,10 @@ export function NewTransactionModal({isOpen, onRequestClose}: NewTransactionModa
             </RadioBox>
 
             <RadioBox 
-            type="button"
-            onClick={() => {setType('withdraw');}}
-            isActive= {type === 'withdraw'}
-            activeColor="red"
+                type="button"
+                onClick={() => {setType('withdraw');}}
+                isActive= {type === 'withdraw'}
+                activeColor="red"
             >
                 <img src={outcomeImg} alt="Saida"/>
                 <span>Saida</span>

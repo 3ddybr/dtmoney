@@ -34,8 +34,7 @@ export function Summary (){
                 {new Intl.NumberFormat('pt-BR',{
                  style:'currency',
                 currency:'BRL'
-                }).format(summary.deposits)}
-                    
+                }).format(summary.deposits)}              
                 
                 </strong>
             </div>
@@ -63,7 +62,6 @@ export function Summary (){
                 }).format(summary.total)}
                 </strong>
             </div>
-
         </Container>
     )
 };

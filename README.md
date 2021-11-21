@@ -1,16 +1,17 @@
 # dtmoney
-Projeto criado no curso do ignite Chapter II
+<h3> Projeto criado no curso do ignite Chapter II </h3>
 
-Aplicacao Front-end Web 
+<h2> Aplicacao Front-end Web </h2>
 
-Ferramentas usadas:
+<h3> Ferramentas usadas: </h3>
 
-*Styled Components
+<p>*Styled Components </p>
 
-*MirageJs
+<p>*MirageJs</p>
 
-*Context API
+<p>*Context API</p>
 
-*Hooks
+<p>*Hooks</p>
 
-*Axios
+<p>*Axios</p>
+
