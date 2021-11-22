@@ -30,4 +30,10 @@ export const Content = styled.div`
         }
     }
 
+    @media (max-width: 490px){
+        button{ 
+            padding: 0 0.5rem;
+        }
+    }
+
 `;

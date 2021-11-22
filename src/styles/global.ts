@@ -27,7 +27,7 @@ export const GlobalStyle = createGlobalStyle `
             font-size:93.75%; //resultado que de 16px vem pra 15px
         }
 
-        @media(max-width: 720px){
+        @media(max-width: 765px){
             font-size:87.5%; //resultado que de 16px vem pra 14px
         }
 
