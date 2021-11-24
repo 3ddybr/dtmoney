@@ -2,12 +2,13 @@ import { useState, FormEvent } from "react";
 import Modal from "react-modal";
 import { useTransactions } from "../../hooks/useTransactions";
 
-
 import incomeImg from '../../assets/income.svg';
 import outcomeImg from '../../assets/outcome.svg';
 import closeImg from '../../assets/close.svg';
 
 import { Container, RadioBox, TransactionTypeContainer } from "./styles";
+// import {db} from "../../services/firebase"
+// import { collection, addDoc } from 'firebase/firestore'
 
 interface NewTransactionModalProps { 
     isOpen: boolean;
@@ -24,6 +25,16 @@ export function NewTransactionModal({isOpen, onRequestClose}: NewTransactionModa
 
     async function handleCreateNewTransaction (event:FormEvent) {
         event.preventDefault();
+
+        // const databaseRef = collection(db, 'transactions');
+        // const addData = () => {
+        //     addDoc(databaseRef, { Name: name, Age: Number(age), PhoneNumber: Number(phone) })
+        //         .then(() => {
+        //             toast.success("Data Sent Successfully!", {
+        //                 pauseOnHover: true
+        //             });
+        //         })
+        // }
 
         await createTransaction ({
             title,
