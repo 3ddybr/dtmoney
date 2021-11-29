@@ -5,7 +5,7 @@ polished manipulacao de cores
 
 
 
-e fazer a vercao mobal 
+e fazer a vercao mobal *
 
 agregar um BD no formulario do NewTransactionModal
 
@@ -14,4 +14,3 @@ inserir o botaao de deletar transaccion na transaccionTable
 
 inserir logim de usuario 
 
-separar por mes 

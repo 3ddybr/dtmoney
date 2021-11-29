@@ -7,8 +7,6 @@ import outcomeImg from '../../assets/outcome.svg';
 import closeImg from '../../assets/close.svg';
 
 import { Container, RadioBox, TransactionTypeContainer } from "./styles";
-// import {db} from "../../services/firebase"
-// import { collection, addDoc } from 'firebase/firestore'
 
 interface NewTransactionModalProps { 
     isOpen: boolean;
@@ -26,23 +24,13 @@ export function NewTransactionModal({isOpen, onRequestClose}: NewTransactionModa
     async function handleCreateNewTransaction (event:FormEvent) {
         event.preventDefault();
 
-        // const databaseRef = collection(db, 'transactions');
-        // const addData = () => {
-        //     addDoc(databaseRef, { Name: name, Age: Number(age), PhoneNumber: Number(phone) })
-        //         .then(() => {
-        //             toast.success("Data Sent Successfully!", {
-        //                 pauseOnHover: true
-        //             });
-        //         })
-        // }
-
         await createTransaction ({
             title,
             amount,
             category,
             type
         })
-
+        
         setTitle('');
         setAmount(0);
         setCategory('');
@@ -65,52 +53,52 @@ export function NewTransactionModal({isOpen, onRequestClose}: NewTransactionModa
           </button>
 
         <Container onSubmit={handleCreateNewTransaction}>
-        <h2>Cadastrar Transação </h2>
-        
-        <input 
-        placeholder="Titulo"
-        value={title}
-        onChange= {event => setTitle(event.target.value)}
-        />
+            <h2>Cadastrar Transação </h2>
+            
+            <input 
+            placeholder="Titulo"
+            value={title}
+            onChange= {event => setTitle(event.target.value)}
+            />
 
-        <input 
-        type="number"
-        placeholder="Valor"
-        value={amount}
-        onChange={event => setAmount(Number(event.target.value))}
-        />
+            <input 
+            type="number"
+            placeholder="Valor"
+            value={amount}
+            onChange={event => setAmount(Number(event.target.value))}
+            />
 
-        <TransactionTypeContainer>
-            <RadioBox  
-                type="button"
-                onClick={() => {setType('deposit');}}
-                isActive= {type === 'deposit'}
-                activeColor="green"
-            >
-                <img src={incomeImg} alt="Entrada"/>
-                <span>Entrada</span>
-            </RadioBox>
+            <TransactionTypeContainer>
+                <RadioBox  
+                    type="button"
+                    onClick={() => {setType('deposit');}}
+                    isActive= {type === 'deposit'}
+                    activeColor="green"
+                >
+                    <img src={incomeImg} alt="Entrada"/>
+                    <span>Entrada</span>
+                </RadioBox>
 
-            <RadioBox 
-                type="button"
-                onClick={() => {setType('withdraw');}}
-                isActive= {type === 'withdraw'}
-                activeColor="red"
-            >
-                <img src={outcomeImg} alt="Saida"/>
-                <span>Saida</span>
-            </RadioBox>
-        </TransactionTypeContainer>
+                <RadioBox 
+                    type="button"
+                    onClick={() => {setType('withdraw');}}
+                    isActive= {type === 'withdraw'}
+                    activeColor="red"
+                >
+                    <img src={outcomeImg} alt="Saida"/>
+                    <span>Saida</span>
+                </RadioBox>
+            </TransactionTypeContainer>
 
-        <input 
-        placeholder="Categoria"
-        value={category}
-        onChange={event => setCategory(event.target.value)}
-        />
+            <input 
+            placeholder="Categoria"
+            value={category}
+            onChange={event => setCategory(event.target.value)}
+            />
 
-        <button type="submit">
-            Cadastrar
-        </button>
+            <button type="submit">
+                Cadastrar
+            </button>
 
 
         </Container>
