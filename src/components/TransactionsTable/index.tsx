@@ -1,11 +1,19 @@
+import { deleteDoc } from '@firebase/firestore';
+import { doc } from 'firebase/firestore';
+import deleteImg from '../../assets/delete.svg';
 import { useTransactions } from "../../hooks/useTransactions";
-
+import { firestoreDB } from '../../services/firebase';
 
 
 import { Container } from "./styles";
 
 export function TransactionsTable (){
     const {transactions} = useTransactions();
+
+    async function handleDelete(id:string){
+        await deleteDoc(doc(firestoreDB, `transactions/${id}`));
+        console.log("delelte");
+    }
 
     return(
         <Container>
@@ -37,7 +45,13 @@ export function TransactionsTable (){
                                     {new Intl.DateTimeFormat('pt-BR').format( //formata para data BR
                                         new Date(transaction.createdAt)
                                     )}
-                                </td>                                
+                                </td>
+                                <td>
+                                    <button onClick={()=>handleDelete(transaction.id)}>
+                                        <img src={deleteImg} alt="Excluir"/>
+                                    </button>
+                                    
+                                </td>                              
                             </tr>                        
                     ))}                    
                 </tbody>

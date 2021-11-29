@@ -51,7 +51,7 @@ export function TransactionsProvider({children}:TransactionProviderProps) {
                     createdAt:doc.data().createdAt,
                 });
             });
-            console.log("Console de todas as transacoes",transaction);
+            // console.log("Console de todas as transacoes",transaction);
             setTransactions(transaction);
         })
     }, []);
