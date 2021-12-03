@@ -14,26 +14,48 @@ export const Content = styled.div`
     align-items: center;
     justify-content: space-between;
 
-    button{
-        font-size: 1rem;
-        color:#fff;
-        background: var(--blue-light);
-        border:0;
-        padding: 0 2rem;
-        border-radius: 0.25rem;
-        height:3rem;
+    #button{
+        display:flex;
+        align-items: center;
+        justify-content: center;
 
-        transition : filter 0.2s;
+        /* button:nth-child(2){
+            margin-left: 1rem;
+        } */
+        
+        button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            color:#fff;
+            background: var(--blue-light);
+            border:0;
+            padding: 0 2rem;
+            border-radius: 0.25rem;
+            height:3rem;
 
-        &:hover {
-            filter: brightness(0.9);
+            &{
+                margin-left: 1rem;
+            }
+
+            transition : filter 0.2s;
+
+            &:hover {
+                filter: brightness(0.9);
+            }
+
+            img{
+                width:1.5rem;
+                margin-left:0.5rem;
+            }
         }
     }
-
     @media (max-width: 490px){
         button{ 
             padding: 0 0.5rem;
         }
     }
+
 
 `;

@@ -1,4 +1,4 @@
-import { useState, FormEvent } from "react";
+import { useState, FormEvent} from "react";
 import Modal from "react-modal";
 import { useTransactions } from "../../hooks/useTransactions";
 
@@ -37,7 +37,17 @@ export function NewTransactionModal({isOpen, onRequestClose}: NewTransactionModa
         setType('deposit')
         onRequestClose()
     }
-        
+    
+        const token= localStorage.getItem('refreshTokenDtMoney');
+        if(token === null) {
+            {isOpen = false}
+        } 
+        console.log("Console do isOpem",isOpen)
+    
+    
+
+    
+
     return(
         <Modal 
         isOpen={isOpen} //funcao para abrir o modal 

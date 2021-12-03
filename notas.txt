@@ -16,3 +16,6 @@ inserir logim de usuario
 
 inserir painel de administrator
 listar todos os usuarios e transacoes podendo o adm deletar elas enviando msg para o usuario 
+
+pq escolhi essas tecnologias
+quais as dificuldades 
