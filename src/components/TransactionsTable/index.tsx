@@ -11,13 +11,13 @@ export function TransactionsTable (){
     const {transactions} = useTransactions();
 
     async function handleDelete(id:string){
-        if(window.confirm("Dejesa realmente excluir?")){
+        if(window.confirm("Deseja realmente excluir?")){
             await deleteDoc(doc(firestoreDB, `transactions/${id}`));
         }        
     }
 
     const token= localStorage.getItem('refreshTokenDtMoney');
-    // console.log("console do tokem", token);
+    // console.log("console do token", token);
 
     if(token ===null){
         return (

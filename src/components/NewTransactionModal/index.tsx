@@ -40,6 +40,7 @@ export function NewTransactionModal({isOpen, onRequestClose}: NewTransactionModa
     
         const token= localStorage.getItem('refreshTokenDtMoney');
         if(token === null) {
+            // eslint-disable-next-line no-lone-blocks
             {isOpen = false}
         } 
         console.log("Console do isOpem",isOpen)
