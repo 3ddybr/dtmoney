@@ -1,5 +1,5 @@
-<img display="flex" align="left" width="290px" justify-content="center"  alt="dtmoney" src="assets/logo.svg"> 
-#dt money
+<img display="flex"  width="290px" justify-content="center"  alt="dtmoney" src="assets/logo.svg"> 
+
 
 <h2>Acesse para testar no <a href="https://dtmoney-blush.vercel.app/">Link</a> </h2>
 ## Tópicos 
